@@ -36,5 +36,5 @@ class addWeight(Resource):
         db.session.add(weight)
         db.session.commit()
 
-        result = weight_data.dump(user)
+        result = weight_data.dump(weight)
         return {"error": False, "message": "Weight was added successfully", "data": result}, 201
